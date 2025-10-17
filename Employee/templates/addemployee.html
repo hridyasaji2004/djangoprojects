@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container w-75 mx-auto p-5 mt-5 text-center fs-5 border border-3 border-danger rounded-4">
+<h3>Add Employee</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+{{form|crispy}}
+<div class="mb-3">
+    <input type="submit">
+</div>
+    </form>
+    </div>
+{% endblock %}

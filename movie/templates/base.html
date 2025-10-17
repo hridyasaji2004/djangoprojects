@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid bg-danger">
+    <a class="navbar-brand fs-5 fw-bold" href="#">OnlineMovieStore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse fs-5 fw-bold" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+      </ul>
+         <a href="{% url 'app1:addmovie' %}" class="btn btn-warning btn-sm">Add</a>
+  </div>
+  </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+
+<!-- <div class="row  mt-3">-->
+<!--        <div class="col-12 bg-secondary text-light text-center height:300px;">-->
+<!--            <p class="center">@2009 a classic horror author website</p>-->
+
+<!--        </div>-->
+<!--    </div>-->
+</body>
+</html>

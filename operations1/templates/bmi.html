@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="bg-info">
+
+{% block content %}
+<div class="container w-50  p-5 mt-5 text-center  bg-light  shadow">
+<h3>BMI</h3>
+    <form method="post">
+        {% csrf_token%}
+{{form|crispy}}
+
+        <div class="mt-3">
+            <input type="submit" value="BMI">
+        </div>
+    </form>
+
+
+
+
+{% if result %}
+    <h1>Bmi: {{result}}</h1>
+{% endif %}
+</div>
+
+
+
+{% endblock %}
+
+</body>
+</html>
